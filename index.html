@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Library</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="add-book-section">
+        <div class="add-book-header">
+          <h2>Odin Library</h2>
+        </div>
+        <div class="book-form">
+          <div class="form-row">
+            <label for="book-title">Book's Title</label>
+            <input
+              id="book-title"
+              name="book-title"
+              type="text"
+              minlength="2"
+            />
+          </div>
+          <div class="form-row">
+            <label for="author-name">Author's Name</label>
+            <input
+              id="author-name"
+              name="author-name"
+              type="text"
+              minlength="2"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="read-book">Have you read this book yet?</label>
+            <select name="read-book" id="read-book">
+              <option value="" selected disabled></option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="add-book">
+            <div>
+              <button type="submit" class="add-btn">Add Book</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="book-list-section">
+        <span class="book-title-text">Book Title</span>
+        <span class="author-text">Author</span>
+        <span class="book-status">Status</span>
+        <span class="remove-book">Remove</span>
+      </div>
+    </div>
+  </body>
+</html>
