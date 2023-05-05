@@ -16,39 +16,39 @@
       <div class="add-book-header">
         <h2>Odin Library</h2>
       </div>
-      <div class="add-book">
-        <div>
-          <button type="submit" class="add-book-btn">Add Book</button>
-        </div>
-
-        <div class="book-form" style="display: none">
+      <div>
+        <button type="submit" class="add-book-btn">Add Book</button>
+      </div>
+      <dialog class="modal">
+        <button class="close-modal-btn">X</button>
+        <!-- <div class="book-form" style="display: none"> -->
+          <form class="form-row" method="dialog">
+            <label for="title">Book's Title</label>
+            <input id="title" name="title" type="text" minlength="2" />
+          </form>
           <div class="form-row">
-            <label for="book-title">Book's Title</label>
-            <input id="book-title" name="book-title" type="text" minlength="2" />
+            <label for="author">Author's Name</label>
+            <input id="author" name="author" type="text" minlength="2" />
           </div>
-          <div class="form-row">
-            <label for="author-name">Author's Name</label>
-            <input id="author-name" name="author-name" type="text" minlength="2" />
-          </div>
-          <div class="form-row">
-            <label for="author-name">Number of Pages</label>
-            <input id="page-count" name="page-count" type="text" />
-          </div>
-          <div class="form-row">
-            <label for="read-book">Have you read this book yet?</label>
-            <select name="read-book" id="read-book">
+          <form class="form-row" method="dialog">
+            <label for="pages">Number of Pages</label>
+            <input id="pages" name="pages" type="text" />
+          </form>
+          <form class="form-row" method="dialog">
+            <label for="read">Have you read this book yet?</label>
+            <select name="read" id="read">
               <option value="" selected disabled></option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
-          </div>
+          </form>
           <div class="submit-book">
             <div>
               <button type="submit" class="submit-book-btn">Submit</button>
             </div>
           </div>
-        </div>
-      </div>
+        <!-- </div> -->
+      </dialog>
       <div class="book-list-section">
         <span class="book-title-text">Book Title</span>
         <span class="author-text">Author</span>
