@@ -1,10 +1,15 @@
+const modal = document.querySelector(".modal");
 const addBookBtn = document.querySelector(".add-book-btn");
-const newBookModal = document.querySelector(".book-form");
+const closeModalBtn = document.querySelector(".close-modal-btn");
+// const newBookModal = document.querySelector(".book-form");
 
 let myLibrary = [];
 
-function Book() {
-  // the constructor...
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 }
 
 function addBookToLibrary() {
@@ -12,5 +17,9 @@ function addBookToLibrary() {
 }
 
 addBookBtn.addEventListener("click", () => {
-  newBookModal.style.display = "block";
+  modal.showModal();
+});
+
+closeModalBtn.addEventListener("click", () => {
+  modal.close();
 });
