@@ -22,38 +22,116 @@
       <dialog class="modal">
         <button class="close-modal-btn">X</button>
         <!-- <div class="book-form" style="display: none"> -->
-          <form class="form-row" method="dialog">
-            <label for="title">Book's Title</label>
-            <input id="title" name="title" type="text" minlength="2" />
-          </form>
-          <div class="form-row">
-            <label for="author">Author's Name</label>
-            <input id="author" name="author" type="text" minlength="2" />
+        <form class="form-row" method="dialog">
+          <label for="title">Book's Title</label>
+          <input id="title" name="title" type="text" minlength="2" />
+        </form>
+        <div class="form-row">
+          <label for="author">Author's Name</label>
+          <input id="author" name="author" type="text" minlength="2" />
+        </div>
+        <form class="form-row" method="dialog">
+          <label for="pages">Number of Pages</label>
+          <input id="pages" name="pages" type="text" />
+          
+        </form>
+        <form class="form-row" method="dialog">
+          <label for="read">Have you read this book yet?</label>
+          <select name="read" id="read">
+            <option value="" selected disabled></option>
+            <option value="Read?">Read?</option>
+            <option value="no">No</option>
+          </select>
+        </form>
+        <div class="submit-book">
+          <div>
+            <button type="submit" class="submit-book-btn">Submit</button>
           </div>
-          <form class="form-row" method="dialog">
-            <label for="pages">Number of Pages</label>
-            <input id="pages" name="pages" type="text" />
-          </form>
-          <form class="form-row" method="dialog">
-            <label for="read">Have you read this book yet?</label>
-            <select name="read" id="read">
-              <option value="" selected disabled></option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </form>
-          <div class="submit-book">
-            <div>
-              <button type="submit" class="submit-book-btn">Submit</button>
-            </div>
-          </div>
+        </div>
         <!-- </div> -->
       </dialog>
       <div class="book-list-section">
-        <span class="book-title-text">Book Title</span>
-        <span class="author-text">Author</span>
-        <span class="book-status">Status</span>
-        <span class="remove-book">Remove</span>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
+        <div class="individual-book">
+          <div class="book-body">
+            <p id="book-title">Title: </p>
+            <p id="book-auther">Author: </p>
+            <p id="book-pages">Pages: </p>
+            <p id="book-read">Read? <button class="change-read-status-btn">Yes</button></p>
+            <button class="delete-book-btn">Remove Book</button>
+          </div>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
