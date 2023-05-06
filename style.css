@@ -66,14 +66,16 @@ select:focus {
 }
 
 .add-book-btn,
-.add-book-btn {
+.add-book-btn,
+.delete-book-btn {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .add-book-btn,
-.submit-book-btn {
+.submit-book-btn,
+.delete-book-btn {
     align-items: center;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -102,21 +104,25 @@ select:focus {
 }
 
 .add-book-btn,
-.submit-book-btn:hover,
+.submit-book-btn,
+.delete-book-btn:hover,
 .add-book-btn,
-.submit-book-btn:focus {
+.submit-book-btn,
+.delete-book-btn:focus {
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: rgba(0, 0, 0, 0.65);
 }
 
 .add-book-btn,
-.submit-book-btn:hover {
+.submit-book-btn,
+.delete-book-btn:hover {
     transform: translateY(-1px);
 }
 
 .add-book-btn,
-.submit-book-btn:active {
+.submit-book-btn,
+.delete-book-btn:active {
     background-color: #F0F0F1;
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
@@ -127,10 +133,31 @@ select:focus {
 .book-list-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 300px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: auto;
+    width: auto;
+    gap: 2rem;
     overflow-y: auto;
-    grid-column-gap: 1rem;
-    padding-top: 2rem;
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    padding: 4rem;
+}
+
+.individual-book {
+    position: relative;
+    border-radius: 1rem;
+    background: #f8fafc;
+    box-shadow: 10px 0px 10px 1px #aaaaaa;
+    border-left: 10px solid #e4dfdb;
+}
+
+.book-body {
+    padding: 1rem;
+    max-height: 200px;
+    font-size: .85rem;
+    font-weight: lighter;
+    color: #6b7280;
+    line-height: 2rem;
 }
 
 @media (max-width: 768px) {
