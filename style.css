@@ -130,6 +130,10 @@ select:focus {
     transform: translateY(0);
 }
 
+.delete-book-btn {
+    height: 1rem;
+}
+
 .book-list-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -143,15 +147,15 @@ select:focus {
     padding: 4rem;
 }
 
+
 .individual-book {
+    display: none;
+    /* Hides styling. Use JS to show when book info appended to DOM */
     position: relative;
     border-radius: 1rem;
     background: #f8fafc;
     box-shadow: 10px 0px 10px 1px #aaaaaa;
     border-left: 10px solid #e4dfdb;
-}
-
-.book-body {
     padding: 1rem;
     max-height: 200px;
     font-size: .85rem;
@@ -159,6 +163,19 @@ select:focus {
     color: #6b7280;
     line-height: 2rem;
 }
+
+p {
+    border-bottom: #6b7280 solid 1px;
+}
+
+/* .book-body {
+    padding: 1rem;
+    max-height: 200px;
+    font-size: .85rem;
+    font-weight: lighter;
+    color: #6b7280;
+    line-height: 2rem;
+} */
 
 @media (max-width: 768px) {
     .modal {
