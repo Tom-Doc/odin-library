@@ -20,7 +20,7 @@ function addBookToLibrary() {
   let pages = document.querySelector("#pages").value;
   let read = document.querySelector("#read").value.toUpperCase();
   let newBook = new Book(title, author, pages, read);
-  myLibrary.push(newBook);
+  myLibrary.unshift(newBook);
   console.log(myLibrary);
   displayBooks();
   document
@@ -47,9 +47,27 @@ function displayBooks() {
     pages.textContent = `Pages: ${book.pages}`;
     bookDiv.appendChild(pages);
 
-    const read = document.createElement("p");
-    read.textContent = `Read: ${book.read}`;
-    bookDiv.appendChild(read);
+    const readText = document.createElement("p");
+    readText.style.display = "inline-block";
+    readText.textContent = "Read: ";
+    bookDiv.appendChild(readText);
+
+    const readBtn = document.createElement("button");
+    readBtn.classList.add("read-btn"); // Add a class to the button to style in CSS
+    readBtn.textContent = book.read === "YES" ? "Read" : "Not Read"; //If dropdown YES is selected then toggle button displayed Read, it NO is selected then toggle reads Not Read
+    readBtn.addEventListener("click", () => {
+      book.read = book.read === "YES" ? "NO" : "YES";
+      readBtn.textContent = book.read === "YES" ? "Read" : "Not Read";
+    });
+    bookDiv.appendChild(readBtn);
+
+    const removeBook = document.createElement("button");
+    removeBook.classList.add("remove-book-btn"); // Add a class to the button to style in CSS
+    removeBook.textContent = "Remove Book";
+    removeBook.addEventListener("click", () => {
+      bookDiv.remove();
+    });
+    bookDiv.appendChild(removeBook);
 
     bookBody.appendChild(bookDiv);
   });
