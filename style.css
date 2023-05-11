@@ -65,6 +65,7 @@ select:focus {
     border-color: #3f51b5;
 }
 
+
 .add-book-btn,
 .add-book-btn,
 .delete-book-btn {
@@ -156,12 +157,36 @@ select:focus {
     background: #f8fafc;
     box-shadow: 10px 0px 10px 1px #aaaaaa;
     border-left: 10px solid #e4dfdb;
-    padding: 1rem;
+    padding: .5rem;
     max-height: 200px;
     font-size: .85rem;
     font-weight: lighter;
     color: #6b7280;
     line-height: 2rem;
+}
+
+.read-btn {
+    background-color: #e4dfdb;
+    border-radius: .5rem;
+    color: #6b7280;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    margin-left: .5rem;
+    font-size: .75rem
+}
+
+.remove-book-btn {
+    display: flex;
+    justify-content: center;
+    background-color: #e4dfdb;
+    border-radius: .5rem;
+    color: #6b7280;
+    font-weight: bold;
+    border: none;
+    margin-top: .5rem;
+    padding: .5rem;
+    font-size: .75rem
 }
 
 p {
