@@ -20,7 +20,7 @@ function addBookToLibrary() {
   let pages = document.querySelector("#pages").value;
   let read = document.querySelector("#read").value.toUpperCase();
   let newBook = new Book(title, author, pages, read);
-  myLibrary.unshift(newBook);
+  myLibrary.unshift(newBook); //Using unshift instead of push will allow the books to fill the page starting with the newest add book first
   console.log(myLibrary);
   displayBooks();
   document
