@@ -16,6 +16,10 @@ html {
     display: flex;
     justify-content: center;
     padding-bottom: 2rem;
+    color: #6b7280;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    font-family: monospace;
 }
 
 .add-book-section {
@@ -117,12 +121,6 @@ select:focus {
 
 .add-book-btn,
 .submit-book-btn,
-.delete-book-btn:hover {
-    transform: translateY(-1px);
-}
-
-.add-book-btn,
-.submit-book-btn,
 .delete-book-btn:active {
     background-color: #F0F0F1;
     border-color: rgba(0, 0, 0, 0.15);
@@ -189,19 +187,6 @@ select:focus {
     font-size: .75rem
 }
 
-p {
-    border-bottom: #6b7280 solid 1px;
-}
-
-/* .book-body {
-    padding: 1rem;
-    max-height: 200px;
-    font-size: .85rem;
-    font-weight: lighter;
-    color: #6b7280;
-    line-height: 2rem;
-} */
-
 @media (max-width: 768px) {
     .modal {
         width: auto;
@@ -214,6 +199,23 @@ p {
     input[type="text"],
     select {
         width: 80%;
+    }
+
+    .book-list-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: auto;
+        width: auto;
+    }
+
+    .individual-book {
+        word-wrap: break-word;
+        padding: .25rem;
+        font-size: .7rem;
+        line-height: 2.5rem;
+        max-height: 100%;
+        max-width: 100%;
     }
 
 }
