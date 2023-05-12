@@ -7,6 +7,7 @@ const bookBody = document.querySelector(".book-list-section");
 
 let myLibrary = [];
 
+// Constructor
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -14,6 +15,7 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
+// Function to add book info from modal into myLibrary array
 function addBookToLibrary() {
   let title = document.querySelector("#title").value;
   let author = document.querySelector("#author").value;
@@ -21,13 +23,14 @@ function addBookToLibrary() {
   let read = document.querySelector("#read").value.toUpperCase();
   let newBook = new Book(title, author, pages, read);
   myLibrary.unshift(newBook); //Using unshift instead of push will allow the books to fill the page starting with the newest add book first
-  console.log(myLibrary);
   displayBooks();
+  // Below will show book card when books are added (currently hidden in CSS)
   document
     .querySelectorAll(".individual-book")
     .forEach((book) => (book.style.display = "block"));
 }
 
+// Function to append all book info to DOM
 function displayBooks() {
   bookBody.innerHTML = ""; // Clear existing books
 
@@ -48,13 +51,14 @@ function displayBooks() {
     bookDiv.appendChild(pages);
 
     const readText = document.createElement("p");
-    readText.style.display = "inline-block";
+    readText.style.display = "inline-block"; //Makes "Read: book.read" button below to be on same line
     readText.textContent = "Read: ";
     bookDiv.appendChild(readText);
 
     const readBtn = document.createElement("button");
     readBtn.classList.add("read-btn"); // Add a class to the button to style in CSS
     readBtn.textContent = book.read === "YES" ? "Read" : "Not Read"; //If dropdown YES is selected then toggle button displayed Read, it NO is selected then toggle reads Not Read
+    // Below toggles book status from Read to Not Read and vice versa
     readBtn.addEventListener("click", () => {
       book.read = book.read === "YES" ? "NO" : "YES";
       readBtn.textContent = book.read === "YES" ? "Read" : "Not Read";
@@ -69,14 +73,17 @@ function displayBooks() {
     });
     bookDiv.appendChild(removeBook);
 
+    // Below appends all book info into the book-body div
     bookBody.appendChild(bookDiv);
   });
 }
 
+// Shows modal
 addBookBtn.addEventListener("click", () => {
   modal.showModal();
 });
 
+// Submits modal info and closes modal after
 submitBookBtn.addEventListener("click", (event) => {
   event.preventDefault();
   addBookToLibrary();
@@ -91,6 +98,7 @@ submitBookBtn.addEventListener("click", (event) => {
   readSelect.selectedIndex = 0;
 });
 
+// X button to close out of modal
 closeModalBtn.addEventListener("click", () => {
   modal.close();
 });
